@@ -1,0 +1,1 @@
+/* IRQ prototypes omitted from the position example. Not CubeMX generated. */
