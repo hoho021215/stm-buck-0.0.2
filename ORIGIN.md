@@ -32,6 +32,17 @@
 | `stm32f3xx_hal_msp.c` | `ff0d90e283c4b1817df60d5fe54243b9f3bdf2d40eaffcc7e926b98335ab7be1` |
 | `system_stm32f3xx.c` | `f1482dd9661a091b418f4479d837c30a60744f4f6021c4dd516da08e5e951169` |
 
-첨부에는 `.ioc`, `.cproject`, `main.h`, IRQ/HAL config 헤더, startup·linker·vendor pack 전체가 없습니다. `buck_f303ze.ioc`와 관련 초기화 참고본은 수작업 재구성한 개발 목표이며 첨부 원본의 완전 역변환이나 실제 CubeMX 생성 결과로 표시하지 않습니다.
+최초 C·metadata 6개 첨부에는 `.ioc`가 없었고, 후속 첨부로 `ex1.ioc`를 추가로 받았습니다. `.cproject`, `main.h`, IRQ/HAL config 헤더, startup·linker·vendor pack 전체는 제공되지 않았습니다. `buck_f303ze.ioc`와 관련 초기화 참고본은 수작업 재구성한 개발 목표이며 첨부 원본의 완전 역변환이나 실제 CubeMX 생성 결과로 표시하지 않습니다.
 
 `Core/Src/system_stm32f3xx.c`는 첨부 원본을 사용합니다. system source는 제품 빌드에서 한 개만 포함합니다. 파일별 검증 해시와 버전 표식은 `RELEASE_MANIFEST.json`, 변경 이유는 [CHANGELOG.md](CHANGELOG.md), 실제 검사 범위는 [VALIDATION.md](VALIDATION.md)에 기록합니다.
+
+## 후속 ex1.ioc 첨부 반영
+
+한국시간 2026-11-19에 추가 첨부한 `ex1.ioc`를 확인했습니다. 업데이트 출발점은 0.0.2 커밋 `abd511b230f4f5238a6c924ace9ecbec2534328e`입니다. 새 파일은 `reference/uploaded/ex1.ioc`에 원본 바이트로 보관하며 `SHA256.json`에도 등록합니다.
+
+- 크기: 9535 bytes
+- SHA-256: `e97fede057d79c63cae36afb8ff8fd3d85cce6c9351ebb20e224f8dc8655fb1c`
+- 기존 `reference/v0.0.1/ex1.ioc`와 바이트 단위 동일
+- 현재 개발 목표 `buck_f303ze.ioc`와 제어 코드는 변경하지 않음
+
+이 추가 작업의 변경 범위는 첨부 원본·해시·검토 문서·배포 manifest입니다. 원본 저장소와 0.0.1에는 쓰지 않습니다.

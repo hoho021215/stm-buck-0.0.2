@@ -1,8 +1,10 @@
 # 첨부 설정 검토와 새 .ioc의 차이 — 0.0.2
 
-사용자가 제공한 `main.c`, `stm32f3xx_hal_msp.c`, `stm32f3xx_it.c`, `system_stm32f3xx.c`, `.project`, `.mxproject`를 확인했습니다. 이번 첨부에는 `.ioc` 자체가 없으므로 생성된 C에 없는 모든 CubeMX 설정을 정확히 역변환할 수는 없습니다. 새 [`buck_f303ze.ioc`](buck_f303ze.ioc)는 이 자료와 기존 제어 모듈의 조건을 조합한 수작업 개발 프로필입니다.
+사용자가 제공한 `main.c`, `stm32f3xx_hal_msp.c`, `stm32f3xx_it.c`, `system_stm32f3xx.c`, `.project`, `.mxproject`를 확인했습니다. 최초 C 파일 첨부에는 `.ioc`가 없었습니다. 이후 추가 첨부한 `ex1.ioc`를 확인했으며, 기존 `reference/v0.0.1/ex1.ioc`와 바이트 단위로 동일합니다. 새 ADC/TIM 설정이 추가된 파일은 아닙니다. 새 [`buck_f303ze.ioc`](buck_f303ze.ioc)는 이 자료와 기존 제어 모듈의 조건을 조합한 수작업 개발 프로필입니다.
 
 ## 실제 첨부에서 확인한 내용
+
+후속 `ex1.ioc`는 CubeMX 속성 파일 형식으로, 중복 없는 속성 261개, IP 9개·핀 23개 목록 및 ADC/TIM/RCC 속성 참조 정적 검사를 통과했습니다. MCU는 STM32F303ZET6, 보드는 NUCLEO-F303ZE입니다. 파일을 실제 CubeMX에서 열거나 재생성한 검사는 아닙니다. 원본은 [`reference/uploaded/ex1.ioc`](reference/uploaded/ex1.ioc)에 보존하며, 코드에 맞춘 `buck_f303ze.ioc`는 그대로 유지합니다.
 
 | 항목 | 첨부의 실제 내용 | 벅에서 수정할 이유 |
 |---|---|---|

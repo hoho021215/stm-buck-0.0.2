@@ -1,5 +1,7 @@
 # CubeMX 설정과 재생성 절차 — 0.0.2
 
+프로그램 설치·F3 pack·workspace·프로젝트 가져오기는 [초기 설정 가이드](GETTING_STARTED_KO.md)를 먼저 읽습니다. 이 문서는 주변장치별 상세 설정표입니다.
+
 [`buck_f303ze.ioc`](buck_f303ze.ioc)는 첨부 C 파일과 0.0.1의 설정 검사 조건을 근거로 재구성한 **개발 목표 프로필**입니다. 실제 CubeMX로 열기·Generate Code·재생성 보존을 시험한 파일로 표현하지 않습니다. 설치된 CubeMX가 경고·자동 보정한 항목을 확인하고 아래 표와 생성된 C 코드를 다시 비교합니다.
 
 첨부 원본의 실험 설정과 차이는 [IOC_REVIEW.md](IOC_REVIEW.md), 사용자 구역은 [CUBEMX_USER_CODE.md](CUBEMX_USER_CODE.md)에 있습니다.

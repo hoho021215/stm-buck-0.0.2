@@ -75,3 +75,11 @@ NOT TESTED: ARM link, real CubeMX regeneration, ISR WCET, power-stage behavior
 새 `.ioc`는 첨부 C와 이전 설정에서 재구성한 개발 목표입니다. 정적 계약 검사는 CubeMX 앱의 인식·재생성 성공을 입증하지 않습니다. 사용자 CubeMX로 빈 폴더에 생성하고 [설정표](CUBEMX_SETUP.md)와 생성된 코드를 비교해야 합니다.
 
 L·C/ESR·MOSFET 정격, PC6 전용 EN 배선과 외부 풀다운, FAULT 분리, VDDA·전류 방향·센서 지연 및 보호 임계값을 확정하기 전에는 `BUCK_BOARD_VERIFIED=0`을 유지합니다.
+
+## 후속 ex1.ioc 첨부 확인
+
+추가 작업에서는 제품 소스·개발 목표 `.ioc`를 변경하지 않았습니다. 첨부한 `ex1.ioc`는 9535 bytes이며 이전 원본과 바이트 단위로 동일합니다. CubeMX 형식의 속성 261개에 중복 키가 없고, IP 9개·핀 23개 목록과 ADC/TIM/RCC 속성 참조의 정적 일치를 확인했습니다.
+
+`python3 tests/test_project_contract.py`를 재실행하여 새 첨부를 포함한 7개 원본의 해시와 기존 IOC/C 계약 검사가 통과함을 확인했습니다. 위의 호스트·ARM 객체 검사 결과는 제품 소스가 동일한 직전 게시에서 수행한 결과이며, 이번 문서·원본 추가 때문에 전체 컴파일을 반복한 것으로 표현하지 않습니다. 실제 CubeMX 열기·재생성은 계속 미검증입니다.
+
+초기 설정 가이드 `GETTING_STARTED_KO.md`는 ST 공식 설치·프로젝트 생성 설명과 현재 저장소의 파일·설정에 맞춰 작성했습니다. 상대 문서 링크와 복사 대상 벅 모듈 8개의 경로를 정적으로 확인했으며 사용자 PC에서 설치·GUI 메뉴·전체 생성 절차를 실제 실행한 검증으로 표현하지 않습니다.

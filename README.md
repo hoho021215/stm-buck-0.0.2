@@ -2,6 +2,8 @@
 
 [GitHub 저장소 바로가기](https://github.com/hoho021215/stm-buck-0.0.2)
 
+**처음 설정한다면: [설치부터 CubeMX 생성·CubeIDE 첫 빌드까지](GETTING_STARTED_KO.md)**
+
 NUCLEO-F303ZE / STM32F303ZET6, 입력 30V → 출력 15V·1A·15W, 목표 스위칭 50kHz의 개발용 코드와 CubeMX 설정입니다. 0.0.1의 제어·보호 모듈을 유지하고, 사용자가 제공한 CubeIDE C 파일의 `USER CODE` 형식에 맞춘 초기화·IRQ·통합 파일과 [`buck_f303ze.ioc`](buck_f303ze.ioc)를 추가합니다.
 
 **이 `.ioc`와 생성 형식의 C 파일은 첨부 자료를 근거로 수작업 재구성한 개발 프로필입니다. CubeMX에서 실제 Generate Code한 결과라고 주장하지 않습니다.** CubeMX로 열어 설정을 확인하고 새 CubeIDE 프로젝트를 생성해야 합니다. `.cproject`, startup, linker script, HAL/CMSIS vendor 전체가 포함된 즉시 Import/Flash 프로젝트는 아닙니다. 실제 수행한 검사는 [VALIDATION.md](VALIDATION.md)에 구분해 기록합니다.
@@ -9,6 +11,8 @@ NUCLEO-F303ZE / STM32F303ZET6, 입력 30V → 출력 15V·1A·15W, 목표 스위
 기본값 `BUCK_BOARD_VERIFIED=0`은 전력단 기동을 차단합니다. 설정 검사에 통과해도 실물 배선·게이트 파형·보호·센싱 검증 전에는 1로 변경하지 않습니다.
 
 ## 이번 버전의 변경
+
+후속 첨부 [`ex1.ioc`](reference/uploaded/ex1.ioc)도 CubeMX 설정 형식으로 확인했습니다. 기존 `reference/v0.0.1/ex1.ioc`와 9535 bytes 전체가 동일하며, 약 10kHz·ADC 단일 채널의 실험 프로필입니다. 실제 생성에 사용할 개발 목표는 루트의 `buck_f303ze.ioc`이며, 첨부 원본으로 교체하지 않았습니다.
 
 첨부 `main.c`는 기본 `LAB_COPY` 모드에서 PA0 ADC를 software trigger로 읽어 PA4 DAC로 복사하고, TIM1을 듀티 50%로 자동 시작했습니다. TIM1은 약 10kHz center-aligned, deadtime 0이며 ADC는 한 채널·DMA 미사용이었습니다. 이 실험 동작을 벅 기동에 그대로 사용하지 않습니다.
 
@@ -36,7 +40,7 @@ DTG=22, ADC 트리거 시점과 제어 계수는 검증 전 초깃값입니다. 
 | `buck_f303ze.ioc` | 새 버전의 재구성 CubeMX 개발 프로필 |
 | `Core/Src/main.c`, MSP, IRQ 및 관련 헤더 | 첨부 스타일을 따른 수작업 통합 참고본. 실제 재생성 결과와 비교 |
 | `Core/Src/buck_*.c`, `Core/Inc/buck_*.h` | 사용자가 별도로 관리하는 제어·설정 검사·출력 감시 모듈 |
-| `reference/uploaded/` | 이번 첨부 6개 파일의 원본 보관. 빌드 소스에 추가하지 않음 |
+| `reference/uploaded/` | C·metadata 6개와 후속 `ex1.ioc` 원본 보관. 빌드 소스에 추가하지 않음 |
 | `reference/v0.0.1/ex1.ioc` | 변경 전 설정 원본 보관 |
 | `integration/*.example` | 사용자 코드 위치를 보여 주는 부분 예제. 빌드 제외 |
 | `tests/` | 호스트 검사용. 펌웨어에 시험 헤더·`BUCK_HOST_TEST`를 넣지 않음 |

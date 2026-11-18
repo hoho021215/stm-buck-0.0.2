@@ -42,13 +42,13 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "7c69f1942a1058b8483a2259877c74ed4a23b1451cddc181f186b8e2398226c3",
-      "git_blob_sha1": "ecb57d0d2eddbe61d8017ba55a1a786d62d49ad6"
+      "sha256": "90afefdec31a3aaa7910b3833c916ff397464ef385562d60dfaebb32f65b65f2",
+      "git_blob_sha1": "d816d085f11808dda34738f9396bc7fa3805e9ab"
     },
     {
       "path": "CUBEMX_SETUP.md",
-      "sha256": "9b466d564414db35fa93fe0345688aa385333e450d119ce2916560616fb31f6f",
-      "git_blob_sha1": "5b51e65aaf6f6ce46930a5a797688a4f94519322"
+      "sha256": "6cd2bb0842ccc2f010cdc05c824eba0be0d519ee646dda2fa46c93d5eafcc5d7",
+      "git_blob_sha1": "436d34a73b6a8b5d703b8cae2de2689d7ccdcfd9"
     },
     {
       "path": "CUBEMX_USER_CODE.md",
@@ -131,24 +131,29 @@
       "git_blob_sha1": "27d935028423966ffa8bb637c4ddf3faf83b3fda"
     },
     {
+      "path": "GETTING_STARTED_KO.md",
+      "sha256": "1d5a85d90a3b5d7811b99e1a03841e7b8d9ea13faf2d3c74c184bab1eeac9d65",
+      "git_blob_sha1": "75196de14089ea2788919428d0442dfc55df7ff2"
+    },
+    {
       "path": "IOC_REVIEW.md",
-      "sha256": "1611901d73d022e3c79603813d12d8d99834e28a95f2475bd4c925afb5cb734a",
-      "git_blob_sha1": "edc3488e2f91e829ef94a6c581eeccb52abe1832"
+      "sha256": "47001d17ebc019c03ab2a07258e5f7c98e3ee6471f9872de77ba9588c9b42fb6",
+      "git_blob_sha1": "cbc4e1abd46b00d6d8e4d6fea251cb166a4a6c7c"
     },
     {
       "path": "ORIGIN.md",
-      "sha256": "cf91bf00ec61eca9daa492e52eb0efe53dd47fb8c2d58bc869f3c52aab3c0a8c",
-      "git_blob_sha1": "9af5c26c10a25c12b855fdf2bf31b434af60d40c"
+      "sha256": "0b6f144d5e0322a27595c0cbaf169c8d6aa21b5474af8b82b5f873ebe8c430c4",
+      "git_blob_sha1": "15927547425a3d032cd83b500644866c31c4ea08"
     },
     {
       "path": "README.md",
-      "sha256": "0ce7855e1afad4bb4399e76ba3e6dba521df871d34f101eaf903b0f4a204cbc3",
-      "git_blob_sha1": "6352876204065a7bad640ae8f26b4992e469e18e"
+      "sha256": "7fd959eaa306c7b00eb1d6f005e5ad657c354a65eb5c16ec164181d899ae746d",
+      "git_blob_sha1": "cd84c27181ee77db319bf7776baf8bd0166d98bb"
     },
     {
       "path": "VALIDATION.md",
-      "sha256": "4b9832387c8565c1b4f45c2962fae2ae7ece9650c1cb498ffe50aaeeddfa8abb",
-      "git_blob_sha1": "14cbacbd3ba8d1fcfa975f7f1bad67bc7c78c88a"
+      "sha256": "6eaf71a88ae8dee08ba2b328c1e7f91f63a6722598844d316dbac3be8b55a589",
+      "git_blob_sha1": "54073d98058752f205f39ec7c93f6c932196b8ab"
     },
     {
       "path": "VERSION",
@@ -182,8 +187,13 @@
     },
     {
       "path": "reference/uploaded/SHA256.json",
-      "sha256": "ff2bb9a12a149ccaf8d772c3296ebbb070ad6f8607cc8ba8801bb362c11970d9",
-      "git_blob_sha1": "3f75bd76648730e3891f6648be9398ad5291bab4"
+      "sha256": "f2d2209fb9e0040e75754a89e2953a459f01c941d49b8aa63ea254171140d38f",
+      "git_blob_sha1": "2bc08534f76ec97eadfcade4fb8f08418bf757d8"
+    },
+    {
+      "path": "reference/uploaded/ex1.ioc",
+      "sha256": "e97fede057d79c63cae36afb8ff8fd3d85cce6c9351ebb20e224f8dc8655fb1c",
+      "git_blob_sha1": "3009f9304c8b1a8ca3e5136c728c45d06f9d94ae"
     },
     {
       "path": "reference/uploaded/main.c",
@@ -255,5 +265,27 @@
       "sha256": "e3e44f568247522f0f8b5e91b0331b51efeb300ead6b91ebcb4472dce04a9552",
       "git_blob_sha1": "d3ecdfcbb36660f55fa561b6d1277f4a06e0c094"
     }
-  ]
+  ],
+  "uploaded_ioc": {
+    "path": "reference/uploaded/ex1.ioc",
+    "bytes": 9535,
+    "sha256": "e97fede057d79c63cae36afb8ff8fd3d85cce6c9351ebb20e224f8dc8655fb1c",
+    "same_as": "reference/v0.0.1/ex1.ioc",
+    "format": "CubeMX properties",
+    "unique_properties": 261,
+    "ips": 9,
+    "pins": 23,
+    "cubemx_opened": false
+  },
+  "last_update": {
+    "base_commit": "abd511b230f4f5238a6c924ace9ecbec2534328e",
+    "scope": "uploaded original IOC, hashes, review and initial CubeMX/CubeIDE setup guide; production code and target profile unchanged",
+    "checks_repeated": [
+      "uploaded-ioc-static-structure",
+      "project-contract",
+      "reference-hashes",
+      "relative-documentation-links",
+      "onboarding-module-paths"
+    ]
+  }
 }
